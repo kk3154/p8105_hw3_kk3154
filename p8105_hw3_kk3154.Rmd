@@ -5,9 +5,28 @@ date: "10/20/2021"
 output: github_document
 ---
 
+```{r}
+library(tidyverse)
+
+knitr::opts_chunk$set(
+  fid.width = 6, 
+  fig.asp = 0.6,
+  out.width = "90%")
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.color = "viridis",
+  ggplot2.continuous.fill = "viridis")
+
+
+scale_color_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+```
+
 ## Problem 1 - Exploring Instacart Data
 
-Loading data from p8105.datasets:
+Loading data from p8105.datasets and the tidyverse:
 
 ```{r}
 library(p8105.datasets)
@@ -17,8 +36,10 @@ data("instacart")
 1.1 Describe the dataset, including size and structure of the data, key variables, and giving illustrative examples of observations.
 
 ```{r}
-
+insta_df = instacart
 ```
+
+The Instacart dataset contains `r ncol(insta_df)` variables of data on `r nrow(insta_df)` products ordered in the instacart app. Each row is one product from each order, and some identifying variables include order ID, customer ID, day/time of order, and time since last order. Key variables for potential analysis include product, aisle, and department IDs and names. For example, observation #9 in the dataset indicates customer number `r insta_df[9, "user_id"]` ordered `r insta_df[9, "product_name"]` from the `r insta_df[9, "aisle"]` aisle in the `r insta_df[9, "department"]` department as part of their order number `r insta_df[9, "order_id"]` at time `r insta_df[9, "order_hour_of_day"]`:00 on the `r insta_df[9, "order_dow"]`th day of the week.
 
 1.2 How many aisles are there, and which aisles are the most items ordered from?
 
@@ -44,6 +65,7 @@ data("instacart")
 
 ```
 
+
 ## Problem 2 - Cleaning and Exploring BRFSS Data
 
 Loading the BRFSS data:
@@ -54,13 +76,21 @@ data("brfss_smart2010")
 
 2.1 Data cleaning:
 
-* format the data to use appropriate variable name
+* format the data to use appropriate variable names
+
 * focus on the “Overall Health” topic
+
 * include only responses from “Excellent” to “Poor”
+
 * organize responses as a factor taking levels ordered from “Poor” to “Excellent”
 
 ```{r}
-
+brfss_df = brfss_smart2010 %>% 
+  janitor::clean_names() %>% 
+  rename(state = locationabbr, county = locationdesc) %>% 
+  filter(topic == "Overall Health", response %in% c("Poor", "Fair", "Good", "Very good", "Excellent")) %>%
+  mutate(response = factor(response, levels = c("Poor", "Fair", "Good", "Very good", "Excellent"), ordered=TRUE)) %>% 
+  arrange(response)
 ```
 
 2.2 In 2002, which states were observed at 7 or more locations? What about in 2010?
@@ -72,7 +102,9 @@ data("brfss_smart2010")
 2.3 Construct a dataset that is limited to `Excellent` responses, and contains year, state, and a variable that averages the `data_value` across locations within a state. 
 
 ```{r}
-
+brfss_df_lim = brfss_df %>% 
+  filter(response == "Excellent") %>% 
+  select(year, state, data_value)
 ```
 
 2.4 Make a “spaghetti” plot of this average value over time within a state (that is, make a plot showing a line for each state across years – the `geom_line` geometry and `group` aesthetic will help).
@@ -87,6 +119,7 @@ data("brfss_smart2010")
 
 ```
 
+
 ## Problem 3 - Accelerometer data from a patient with congestive heart failure
 
 35 days of accelerometer data where activity.* variables are activity counts for each minute of a 24-hour day starting at midnight.
@@ -96,12 +129,23 @@ data("brfss_smart2010")
 The final dataset includes all originally observed variables and values, has useful variable names, includes a weekday vs. weekend variable, and encodes data with reasonable variable classes.
 
 ```{r}
-
+acc_df = read_csv("data/accel_data.csv") %>% 
+  janitor::clean_names() %>% 
+  mutate(weekend = ifelse(day %in% c("Saturday", "Sunday"), 1, 0)) %>% 
+  mutate(weekend = factor(weekend)) %>% 
+  mutate(day = factor(day, levels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), ordered=TRUE)) %>% 
+  pivot_longer(
+    activity_1:activity_1440,
+    names_to = "minute", 
+    names_prefix = "activity_", 
+    values_to = "activity_count"
+  ) %>% 
+  mutate(minute = as.numeric(minute))
 ```
 
 3.2 Describing the resulting dataset (e.g. what variables exist, how many observations, etc.):
 
-
+The original accelerometer dataset included observations from 35 days with 1443 columns, including 1440 activity count variables for each minute in each 24 hour day. After tidying, the accelerometer dataset now contains `r nrow(acc_df)` observations at the minute level that can be further grouped by week, day, or day of the week. This tidy, longer datset now contains only `r ncol(acc_df)` variables: `r colnames(acc_df)`.
 
 3.3 Traditional analyses of accelerometer data focus on the total activity over the day. Using your tidied dataset, aggregate across minutes to create a total activity variable for each day, and create a table showing these totals. Are any trends apparent?
 
@@ -114,13 +158,3 @@ The final dataset includes all originally observed variables and values, has use
 ```{r}
 
 ```
-
-
-
-
-
-
-
-
-
-
