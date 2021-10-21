@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="data:text/css,%0A%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Aa%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0Ahr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Apre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Acode%2C%0Akbd%2C%0Apre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ainput%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Ainput%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Atd%2C%0Ath%20%7B%0Apadding%3A%200%3B%0A%7D%0A%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Ainput%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%2C%0Aa%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Ahr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ahr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Ablockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aol%20ol%2C%0Aul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Aul%20ul%20ol%2C%0Aul%20ol%20ol%2C%0Aol%20ul%20ol%2C%0Aol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Add%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0A%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0A%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0A%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0A%2Emarkdown%2Dbody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Aa%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0A%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Ah1%20%2Eocticon%2Dlink%2C%0Ah2%20%2Eocticon%2Dlink%2C%0Ah3%20%2Eocticon%2Dlink%2C%0Ah4%20%2Eocticon%2Dlink%2C%0Ah5%20%2Eocticon%2Dlink%2C%0Ah6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%2C%0Ah2%3Ahover%20%2Eanchor%2C%0Ah3%3Ahover%20%2Eanchor%2C%0Ah4%3Ahover%20%2Eanchor%2C%0Ah5%3Ahover%20%2Eanchor%2C%0Ah6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%202%2E25em%3B%0Aline%2Dheight%3A%201%2E2%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E225%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Ah3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Ah4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ah5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Ah6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ap%2C%0Ablockquote%2C%0Aul%2C%0Aol%2C%0Adl%2C%0Atable%2C%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Aul%20ul%2C%0Aul%20ol%2C%0Aol%20ol%2C%0Aol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Ali%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Adl%20%7B%0Apadding%3A%200%3B%0A%7D%0Adl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Ablockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Ablockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Atable%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Atable%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atable%20th%2C%0Atable%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Atable%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Atable%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Acode%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Acode%3Abefore%2C%0Acode%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Apre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0A%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0A%2Ehighlight%20pre%2C%0Apre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Apre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Apre%20code%3Abefore%2C%0Apre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0A%2Epl%2Dc1%2C%0A%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0A%2Epl%2De%2C%0A%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0A%2Epl%2Ds%20%2Epl%2Ds1%2C%0A%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0A%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0A%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0A%2Epl%2Dpds%2C%0A%2Epl%2Ds%2C%0A%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0A%2Epl%2Dsr%2C%0A%2Epl%2Dsr%20%2Epl%2Dcce%2C%0A%2Epl%2Dsr%20%2Epl%2Dsra%2C%0A%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0A%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0A%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0A%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0A%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0A%2Epl%2Dmh%2C%0A%2Epl%2Dmh%20%2Epl%2Den%2C%0A%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0A%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0A%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0A%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0A%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A%2EsourceLine%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0Acode%20%2Ekw%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Edt%20%7B%20color%3A%20%23ed6a43%3B%20%7D%0Acode%20%2Edv%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ebn%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Efl%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ech%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Est%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eco%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Eot%20%7B%20color%3A%20%230086b3%3B%20%7D%0Acode%20%2Eal%20%7B%20color%3A%20%23a61717%3B%20%7D%0Acode%20%2Efu%20%7B%20color%3A%20%2363a35c%3B%20%7D%0Acode%20%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%0Acode%20%2Ewa%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ecn%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Esc%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Evs%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Ess%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eim%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eva%20%7Bcolor%3A%20%23008080%3B%20%7D%0Acode%20%2Ecf%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eop%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ebu%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eex%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Epp%20%7B%20color%3A%20%23999999%3B%20%7D%0Acode%20%2Eat%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Edo%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Ean%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ecv%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ein%20%7B%20color%3A%20%23008080%3B%20%7D%0A">
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="p8105_hw3_kk3154">p8105_hw3_kk3154</h1>
+<p>Kristen King 10/20/2021</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">fid.width =</span> <span class="dv">6</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.asp =</span> <span class="fl">0.6</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">out.width =</span> <span class="st">&quot;90%&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">ggplot2.continuous.color =</span> <span class="st">&quot;viridis&quot;</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">ggplot2.continuous.fill =</span> <span class="st">&quot;viridis&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>scale_color_discrete <span class="ot">=</span> scale_colour_viridis_d</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>scale_fill_discrete <span class="ot">=</span> scale_fill_viridis_d</span></code></pre></div>
+<h2 id="problem-1---exploring-instacart-data">Problem 1 - Exploring Instacart Data</h2>
+<p>Loading data from p8105.datasets:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(p8105.datasets)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;instacart&quot;</span>)</span></code></pre></div>
+<p><strong>1.1</strong> Describe the dataset, including size and structure of the data, key variables, and giving illustrative examples of observations.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>insta_df <span class="ot">=</span> instacart</span></code></pre></div>
+<p>The Instacart dataset contains 15 variables of data on 1384617 products ordered in the instacart app. Each row is one product from each order, and some identifying variables include order ID, customer ID, day/time of order, and time since last order. Key variables for potential analysis include product, aisle, and department IDs and names. For example, observation #9 in the dataset indicates customer number 79431 ordered Grated Pecorino Romano Cheese from the specialty cheeses aisle in the dairy eggs department as part of their order number 36 at time 18:00 on the 6th day of the week.</p>
+<p><strong>1.2</strong> How many aisles are there, and which aisles are the most items ordered from?</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>aisle_count <span class="ot">=</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  insta_df <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">aisle =</span> <span class="fu">factor</span>(aisle)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(aisle) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_items =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_items)) </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>aisle_count <span class="sc">%&gt;%</span>  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">aisle</th>
+<th align="right">n_items</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fresh vegetables</td>
+<td align="right">150609</td>
+</tr>
+<tr class="even">
+<td align="left">fresh fruits</td>
+<td align="right">150473</td>
+</tr>
+<tr class="odd">
+<td align="left">packaged vegetables fruits</td>
+<td align="right">78493</td>
+</tr>
+<tr class="even">
+<td align="left">yogurt</td>
+<td align="right">55240</td>
+</tr>
+<tr class="odd">
+<td align="left">packaged cheese</td>
+<td align="right">41699</td>
+</tr>
+<tr class="even">
+<td align="left">water seltzer sparkling water</td>
+<td align="right">36617</td>
+</tr>
+</tbody>
+</table>
+<p>There are 134 aisles in this dataset, and the fresh vegetables, fresh fruits, packaged vegetables fruits, yogurt, packaged cheese, water seltzer sparkling water aisles have the most items ordered from them.</p>
+<p><strong>1.3</strong> Make a plot that shows the number of items ordered in each aisle, limiting this to aisles with more than 10000 items ordered. Arrange aisles sensibly, and organize your plot so others can read it.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>insta_df <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">aisle =</span> <span class="fu">factor</span>(aisle)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(aisle) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_items =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n_items <span class="sc">&gt;</span> <span class="dv">10000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">aisle =</span> <span class="fu">fct_reorder</span>(aisle, n_items)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> aisle, <span class="at">y =</span> n_items, <span class="at">xaxt =</span> <span class="st">&quot;&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Count of Items Ordered per Aisle&quot;</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Number of Items&quot;</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Aisle&quot;</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Note: Only depicts aisles with &gt;10,000 items ordered.&quot;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<img src="data:image/png;base64,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" width="90%" />
+
+<p><strong>1.4</strong> Make a table showing the three most popular items in each of the aisles “baking ingredients”, “dog food care”, and “packaged vegetables fruits”. Include the number of times each item is ordered in your table.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>insta_df <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">aisle =</span> <span class="fu">factor</span>(aisle)) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(aisle, product_name) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_items =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(aisle <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;baking ingredients&quot;</span>, <span class="st">&quot;dog food care&quot;</span>, <span class="st">&quot;packaged vegetables fruits&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">item_rank =</span> <span class="fu">min_rank</span>(<span class="fu">desc</span>(n_items))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(item_rank <span class="sc">&lt;</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(aisle, item_rank, product_name, n_items) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(aisle, item_rank) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">aisle</th>
+<th align="right">item_rank</th>
+<th align="left">product_name</th>
+<th align="right">n_items</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">baking ingredients</td>
+<td align="right">1</td>
+<td align="left">Light Brown Sugar</td>
+<td align="right">499</td>
+</tr>
+<tr class="even">
+<td align="left">baking ingredients</td>
+<td align="right">2</td>
+<td align="left">Pure Baking Soda</td>
+<td align="right">387</td>
+</tr>
+<tr class="odd">
+<td align="left">baking ingredients</td>
+<td align="right">3</td>
+<td align="left">Cane Sugar</td>
+<td align="right">336</td>
+</tr>
+<tr class="even">
+<td align="left">dog food care</td>
+<td align="right">1</td>
+<td align="left">Snack Sticks Chicken &amp; Rice Recipe Dog Treats</td>
+<td align="right">30</td>
+</tr>
+<tr class="odd">
+<td align="left">dog food care</td>
+<td align="right">2</td>
+<td align="left">Organix Chicken &amp; Brown Rice Recipe</td>
+<td align="right">28</td>
+</tr>
+<tr class="even">
+<td align="left">dog food care</td>
+<td align="right">3</td>
+<td align="left">Small Dog Biscuits</td>
+<td align="right">26</td>
+</tr>
+<tr class="odd">
+<td align="left">packaged vegetables fruits</td>
+<td align="right">1</td>
+<td align="left">Organic Baby Spinach</td>
+<td align="right">9784</td>
+</tr>
+<tr class="even">
+<td align="left">packaged vegetables fruits</td>
+<td align="right">2</td>
+<td align="left">Organic Raspberries</td>
+<td align="right">5546</td>
+</tr>
+<tr class="odd">
+<td align="left">packaged vegetables fruits</td>
+<td align="right">3</td>
+<td align="left">Organic Blueberries</td>
+<td align="right">4966</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1.5</strong> Make a table showing the mean hour of the day at which Pink Lady Apples and Coffee Ice Cream are ordered on each day of the week; format this table for human readers (i.e. produce a 2 x 7 table).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>insta_df <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">dow =</span> <span class="fu">factor</span>(order_dow, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Sun&quot;</span>, <span class="st">&quot;Mon&quot;</span>, <span class="st">&quot;Tues&quot;</span>, <span class="st">&quot;Weds&quot;</span>, <span class="st">&quot;Thurs&quot;</span>, <span class="st">&quot;Fri&quot;</span>, <span class="st">&quot;Sat&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(product_name, dow) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(product_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Pink Lady Apples&quot;</span>, <span class="st">&quot;Coffee Ice Cream&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_time =</span> <span class="fu">mean</span>(order_hour_of_day)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> <span class="st">&quot;dow&quot;</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="st">&quot;mean_time&quot;</span> </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;product_name&#39;. You can override using the `.groups` argument.</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">product_name</th>
+<th align="right">Sun</th>
+<th align="right">Mon</th>
+<th align="right">Tues</th>
+<th align="right">Weds</th>
+<th align="right">Thurs</th>
+<th align="right">Fri</th>
+<th align="right">Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Coffee Ice Cream</td>
+<td align="right">13.77</td>
+<td align="right">14.32</td>
+<td align="right">15.38</td>
+<td align="right">15.32</td>
+<td align="right">15.22</td>
+<td align="right">12.26</td>
+<td align="right">13.83</td>
+</tr>
+<tr class="even">
+<td align="left">Pink Lady Apples</td>
+<td align="right">13.44</td>
+<td align="right">11.36</td>
+<td align="right">11.70</td>
+<td align="right">14.25</td>
+<td align="right">11.55</td>
+<td align="right">12.78</td>
+<td align="right">11.94</td>
+</tr>
+</tbody>
+</table>
+<h2 id="problem-2---cleaning-and-exploring-brfss-data">Problem 2 - Cleaning and Exploring BRFSS Data</h2>
+<p>Loading the BRFSS data:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;brfss_smart2010&quot;</span>)</span></code></pre></div>
+<p><strong>2.1 Data cleaning:</strong></p>
+<ul>
+<li><p>format the data to use appropriate variable names</p></li>
+<li><p>focus on the “Overall Health” topic</p></li>
+<li><p>include only responses from “Excellent” to “Poor”</p></li>
+<li><p>organize responses as a factor taking levels ordered from “Poor” to “Excellent”</p></li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>brfss_df <span class="ot">=</span> brfss_smart2010 <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">state =</span> locationabbr, <span class="at">county =</span> <span class="fu">factor</span>(<span class="st">&quot;locationdesc&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="st">&quot;Overall Health&quot;</span>, response <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Poor&quot;</span>, <span class="st">&quot;Fair&quot;</span>, <span class="st">&quot;Good&quot;</span>, <span class="st">&quot;Very good&quot;</span>, <span class="st">&quot;Excellent&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">response =</span> <span class="fu">factor</span>(response, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Poor&quot;</span>, <span class="st">&quot;Fair&quot;</span>, <span class="st">&quot;Good&quot;</span>, <span class="st">&quot;Very good&quot;</span>, <span class="st">&quot;Excellent&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(response)</span></code></pre></div>
+<p><strong>2.2</strong> In 2002, the states that were observed at 7 or more locations were:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>brfss_df <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2002</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_loc =</span> <span class="fu">n_distinct</span>(county)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n_loc <span class="sc">&gt;=</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_loc)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">state</th>
+<th align="right">n_loc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">PA</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">MA</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">NJ</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">CT</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">FL</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">NC</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
+<p>In 2010, the states that were observed at 7 or more locations were:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>brfss_df <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2010</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_loc =</span> <span class="fu">n_distinct</span>(county)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n_loc <span class="sc">&gt;=</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n_loc)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">state</th>
+<th align="right">n_loc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">FL</td>
+<td align="right">41</td>
+</tr>
+<tr class="even">
+<td align="left">NJ</td>
+<td align="right">19</td>
+</tr>
+<tr class="odd">
+<td align="left">TX</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">CA</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">MD</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="left">NC</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">NE</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">WA</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">MA</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">NY</td>
+<td align="right">9</td>
+</tr>
+<tr class="odd">
+<td align="left">OH</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">CO</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">PA</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">SC</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.3</strong> Construct a dataset that is limited to <code>Excellent</code> responses, and contains year, state, and a variable that averages the <code>data_value</code> across locations within a state.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>brfss_df_exc_only <span class="ot">=</span> brfss_df <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(response <span class="sc">==</span> <span class="st">&quot;Excellent&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, state) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_data_value =</span> <span class="fu">mean</span>(data_value))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<p><strong>2.4</strong> Make a “spaghetti” plot of this average value over time within a state (that is, make a plot showing a line for each state across years – the <code>geom_line</code> geometry and <code>group</code> aesthetic will help).</p>
+<p><strong>2.5</strong> Make a two-panel plot showing, for the years 2006, and 2010, distribution of data_value for responses (“Poor” to “Excellent”) among locations in NY State.</p>
+<h2 id="problem-3---accelerometer-data-from-a-patient-with-congestive-heart-failure">Problem 3 - Accelerometer data from a patient with congestive heart failure</h2>
+<p>35 days of accelerometer data where activity.* variables are activity counts for each minute of a 24-hour day starting at midnight.</p>
+<p><strong>3.1</strong> Loading, tidying, and wrangling data.</p>
+<p>The final dataset includes all originally observed variables and values, has useful variable names, includes a weekday vs. weekend variable, and encodes data with reasonable variable classes.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>acc_df <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/accel_data.csv&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weekend =</span> <span class="fu">ifelse</span>(day <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Saturday&quot;</span>, <span class="st">&quot;Sunday&quot;</span>), <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">weekend =</span> <span class="fu">factor</span>(weekend)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">day =</span> <span class="fu">factor</span>(day, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Sunday&quot;</span>, <span class="st">&quot;Monday&quot;</span>, <span class="st">&quot;Tuesday&quot;</span>, <span class="st">&quot;Wednesday&quot;</span>, <span class="st">&quot;Thursday&quot;</span>, <span class="st">&quot;Friday&quot;</span>, <span class="st">&quot;Saturday&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    activity_1<span class="sc">:</span>activity_1440,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;minute&quot;</span>, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">&quot;activity_&quot;</span>, </span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;activity_count&quot;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">minute =</span> <span class="fu">as.numeric</span>(minute))</span></code></pre></div>
+<pre><code>## Rows: 35 Columns: 1443
+
+## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr    (1): day
+## dbl (1442): week, day_id, activity.1, activity.2, activity.3, activity.4, ac...
+
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p><strong>3.2</strong> Describing the resulting dataset (e.g. what variables exist, how many observations, etc.):</p>
+<p>The original accelerometer dataset included observations from 35 days with 1443 columns, including 1440 activity count variables for each minute in each 24 hour day. After tidying, the accelerometer dataset now contains 50400 observations at the minute level that can be further grouped by week, day, or day of the week. This tidy, longer datset now contains only 6 variables: week, day_id, day, weekend, minute, activity_count.</p>
+<p><strong>3.3</strong> Traditional analyses of accelerometer data focus on the total activity over the day. Using your tidied dataset, aggregate across minutes to create a total activity variable for each day, and create a table showing these totals. Are any trends apparent?</p>
+<p><strong>3.4</strong> Accelerometer data allows the inspection activity over the course of the day. Make a single-panel plot that shows the 24-hour activity time courses for each day and use color to indicate day of the week. Describe in words any patterns or conclusions you can make based on this graph.</p>
+
+</body>
+</html>
