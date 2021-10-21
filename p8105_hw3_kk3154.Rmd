@@ -193,8 +193,8 @@ brfss_df_exc_only %>%
     legend.text = element_text(size = 7)
     ) + 
   labs(
-    title = "Data Values over Time, by State", 
-    y = "Mean Data Value Across Locations",
+    title = "Proportion of 'Excellent' Responses over Time, by State", 
+    y = "Mean Value Across State Locations",
     x = "Year"
   )
 ```
@@ -202,7 +202,16 @@ brfss_df_exc_only %>%
 **2.5** Make a two-panel plot showing, for the years 2006, and 2010, distribution of data_value for responses (“Poor” to “Excellent”) among locations in NY State.
 
 ```{r}
-
+brfss_df %>% 
+  filter(year %in% c(2006, 2010), state == "NY") %>% 
+  ggplot(aes(x = response, y = data_value, fill = response)) +
+  geom_boxplot() +
+  facet_grid(. ~ year) + 
+  labs(
+    title = "Disribution of responses across locations in NY state, 2006 vs. 2010", 
+    x = "Response", 
+    y = "Proportion"
+  )
 ```
 
 
