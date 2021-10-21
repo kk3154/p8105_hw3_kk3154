@@ -19,8 +19,8 @@ theme_set(theme_minimal() + theme(legend.position = "bottom"))
 
 options(
   ggplot2.continuous.color = "viridis",
-  ggplot2.continuous.fill = "viridis", 
-  dpi = 600)
+  ggplot2.continuous.fill = "viridis"
+  )
 
 
 scale_color_discrete = scale_colour_viridis_d
@@ -65,7 +65,7 @@ There are `r nrow(aisle_count)` aisles in this dataset, and the `r pull(head(ais
 
 **1.3** Make a plot that shows the number of items ordered in each aisle, limiting this to aisles with more than 10000 items ordered. Arrange aisles sensibly, and organize your plot so others can read it.
 
-```{r}
+```{r, dpi = 600}
 insta_df %>% 
   mutate(aisle = factor(aisle)) %>% 
   group_by(aisle) %>% 
@@ -203,7 +203,7 @@ brfss_df_exc_only %>%
 
 **2.5** Make a two-panel plot showing, for the years 2006, and 2010, distribution of data_value for responses (“Poor” to “Excellent”) among locations in NY State.
 
-```{r}
+```{r, dpi = 600}
 brfss_df %>% 
   filter(year %in% c(2006, 2010), state == "NY") %>% 
   ggplot(aes(x = response, y = data_value, fill = response)) +
@@ -277,7 +277,7 @@ When aggregating by day of the week, it becomes more apparent that Saturdays hav
 
 **3.4** Accelerometer data allows the inspection activity over the course of the day. Make a single-panel plot that shows the 24-hour activity time courses for each day and use color to indicate day of the week. 
 
-```{r}
+```{r, dpi = 900}
 acc_df %>% 
   mutate(hour = round(floor(minute/60))) %>% 
   group_by(day_id, day, hour) %>%
