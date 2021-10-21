@@ -185,14 +185,14 @@ brfss_df_exc_only = brfss_df %>%
 
 **2.4** Make a “spaghetti” plot of this average value over time within a state (that is, make a plot showing a line for each state across years – the `geom_line` geometry and `group` aesthetic will help).
 
-```{r}
+```{r, dpi = 900}
 brfss_df_exc_only %>% 
   ggplot(aes(x = year, y = mean_data_value)) +
   geom_line(aes(group = state, color = state)) + 
   scale_color_viridis_d() + 
   theme(
     legend.position = "right",
-    legend.text = element_text(size = 7)
+    legend.text = element_text(size = 6)
     ) + 
   labs(
     title = "Proportion of 'Excellent' Responses over Time, by State", 
