@@ -8,6 +8,7 @@ output: github_document
 ```{r, message = FALSE}
 library(tidyverse)
 library(viridis)
+library(ggridges)
 
 knitr::opts_chunk$set(
   fid.width = 6, 
@@ -208,20 +209,20 @@ brfss_df %>%
   geom_boxplot() +
   facet_grid(. ~ year) + 
   labs(
-    title = "Disribution of responses across locations in NY state, 2006 vs. 2010", 
+    title = "Distribution of responses across locations in NY state, 2006 vs. 2010", 
     x = "Response", 
     y = "Proportion"
   )
 ```
 
 
-## Problem 3 - Accelerometer data from a patient with congestive heart failure
+## Problem 3 - Accelerometer Data
 
-35 days of accelerometer data where activity.* variables are activity counts for each minute of a 24-hour day starting at midnight.
+35 days of accelerometer data where activity.* variables are activity counts from a patient with congestive heart failure for each minute of a 24-hour day starting at midnight.
 
 **3.1** Loading, tidying, and wrangling data.
 
-The final dataset includes all originally observed variables and values, has useful variable names, includes a weekday vs. weekend variable, and encodes data with reasonable variable classes.
+This final dataset includes all originally observed variables and values, has useful variable names, includes a weekday vs. weekend variable, and encodes data with reasonable variable classes.
 
 ```{r}
 acc_df = read_csv("data/accel_data.csv") %>% 
@@ -245,11 +246,48 @@ The original accelerometer dataset included observations from 35 days with 1443 
 **3.3** Traditional analyses of accelerometer data focus on the total activity over the day. Using your tidied dataset, aggregate across minutes to create a total activity variable for each day, and create a table showing these totals. Are any trends apparent?
 
 ```{r}
+acc_df %>% 
+  group_by(day_id) %>%
+  summarize(total_activity = sum(activity_count)) %>% 
+  knitr::kable(col.names = c("Study Day", "Total Activity"))
 
+acc_df %>% 
+  group_by(day_id) %>% 
+  summarize(total_activity = sum(activity_count)) %>% 
+  ggplot(aes(x = day_id, y = total_activity)) + 
+  geom_point(alpha = 0.8)
+
+acc_df %>% 
+  group_by(day) %>% 
+  summarize(total_activity = sum(activity_count)) %>% 
+  knitr::kable(col.names = c("Day of the Week", "Total Activity"))
+
+acc_df %>% 
+  group_by(day) %>% 
+  summarize(total_activity = sum(activity_count)) %>% 
+  ggplot(aes(x = day, y = total_activity)) + 
+  geom_point(alpha = 0.8)
 ```
 
-**3.4** Accelerometer data allows the inspection activity over the course of the day. Make a single-panel plot that shows the 24-hour activity time courses for each day and use color to indicate day of the week. Describe in words any patterns or conclusions you can make based on this graph.
+When aggregating by study day (1-35), there is no obvious overall pattern. There are a few days with very little activity, and in general the activity fluctuates over time, where it's not consistently higher or lower for many days in a row. 
+
+When aggregating by day of the week, it becomes more apparent that Saturdays have much less activity than the other days of the week. Assuming a Sunday start to the week, activity tends to be higher later in the week, with the maximum activity observed on Fridays, until the sudden drop and minimum activity on Saturdays.
+
+
+**3.4** Accelerometer data allows the inspection activity over the course of the day. Make a single-panel plot that shows the 24-hour activity time courses for each day and use color to indicate day of the week. 
 
 ```{r}
-
+acc_df %>% 
+  mutate(hour = round(floor(minute/60))) %>% 
+  group_by(day_id, day, hour) %>%
+  summarize(hourly_total = sum(activity_count)) %>% 
+  ggplot(aes(x = hour, y = hourly_total, color = day)) + 
+  geom_line(aes(group = day_id), alpha = 0.8) + 
+  labs(
+    title = "Activity Across the 24 Hours of Each Day", 
+    y = "Hourly Activity Count, per Day",
+    x = "Hour"
+  )
 ```
+
+Based on this graph, we can conclude that this patient is very active on Friday and Saturday nights, whereas on weekdays there is more activity earlier in the day as well. They also have a late morning/early afternoon bump in activity on Sundays. This patient's daily activity tends to wind down around between 10:00 and 11:00 pm, and they are mostly inactive between the hours of midnight and 5:00 am. Notably there are Saturday(s) with no or very little activity recorded all day.
